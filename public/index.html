@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>COVID-19 Statistics and Calculator</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.14.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.14.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.14.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.14.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.14.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+  <body>
+    <header id="main-header">
+    <div class="container">
+      <h1>COVID-19 Statistics and Calculator</h1>
+      </div>
+  </header>
+  <nav id="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Calculator</a></li>
+        <li><a href="#">Statistics</a></li>
+        <li><a href="#">Avoid Catching It</a></li>
+      </ul>
+      </div>
+  </nav>
+  <section id="showcase">
+    <div class="container">
+      <h1>
+      </h1>
+  </section>
+  <div class="container">
+    <section id="main">
+      <h1>Welcome</h1>
+      <p>COVID-19 or the Coronavirus is virus that has many flu and pnemuina like symptoms, however, those symptoms are much stronger and are considered to be much more deadly than those of the flu. COVID-19 is especially harmful for at-risk indivduals such as the elderly and those with pre-existing medical conditions. In 2020, the World Health Organization declared the COVID-19 virus a global pandemic which has caused many governments around the world to issue the shutdown of schools and business as well as implementing quarantining for all people. New things about the virus are constantly being discovered by varius medical groups around the world who are looking for a vaccine to this disease. 
+        </p>
+    </section>
+
+    <aside id="sidebar">
+        <p>Disclaimer: If you have any of the symptoms relating to COVID-19, please contact your doctor or any health care offical as to what to do next.
+        </p>
+    </aside>  
+  </div>
+    
+    <footer id="main-footer">
+      <p>Copyright &copy; 2020 COVID-19 Calculator</p>
+    </footer> 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
