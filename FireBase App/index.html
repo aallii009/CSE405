@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Firebase Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="login_div" class="main">
+		<h2>Firebase Web Login</h2>
+		<input type="email" placeholder="Email..." id="email_input"/>
+		<input type="password" placeholder="Password..." id="password_input"/>
+		<button onclick="login()">Login</button>
+	</div>
+
+	<div id="user_div" class= "loggedin">
+		<h2>Welcome User</h2>
+		<p id = "user_para">Welcome to Firebase Login. You are currently logged in.</p>
+		<button onclick="logout()">Logout</button>
+	</div>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+<body>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
+</body>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBHEnZ9Ex10KBhZ219iAoLvHJnIG_yOgRQ",
+    authDomain: "fir-test-e2120.firebaseapp.com",
+    databaseURL: "https://fir-test-e2120.firebaseio.com",
+    projectId: "fir-test-e2120",
+    storageBucket: "fir-test-e2120.appspot.com",
+    messagingSenderId: "987883434620",
+    appId: "1:987883434620:web:0c28f21432767f524bcff9",
+    measurementId: "G-FD4L50R125"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="index.js"></script>
+</body>
+</html>
